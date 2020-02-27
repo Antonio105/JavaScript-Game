@@ -51,3 +51,6 @@ td:hover::after {
     width: 100%;
     z-index: -1;
 }
+td:hover{
+    background-color: grey;
+}

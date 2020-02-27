@@ -31,5 +31,10 @@ function game(x)
     currentPositionY = currentID[8]; 
 }
 
+    if(position[0],[0]){
+        
+        document.getElementById("one").style.background = "red";
+    }
+}
 
 
