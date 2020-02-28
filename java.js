@@ -29,8 +29,6 @@ function game(x)
     currentID = x.id;
     currentPositionX = currentID[3];
     currentPositionY = currentID[8]; 
-}
-
     if(position[0],[0]){
         
         document.getElementById("one").style.background = "red";
