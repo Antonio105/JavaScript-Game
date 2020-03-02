@@ -2,7 +2,6 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script src="java.js"></script>
         <title>Connect Four</title>
         <link rel="icon" href="images/connect-four-icon.png" type="image/x-icon" sizes="8x8 16x16 32x32">
     </head>
@@ -11,7 +10,7 @@
 
         <table onclick="tableClick()">
             <tr>
-                <td id="row1-col1" class="row" onmouseover="game(this)" name="empty"></td>
+                <td id="row1-col1" name="empty" class="row" onmouseover="game(this)"  ></td>
                 <td id="row1-col2" onmouseover="game(this)" name="empty"></td>
                 <td id="row1-col3" onmouseover="game(this)" name="empty"></td>
                 <td id="row1-col4" onmouseover="game(this)" name="empty"></td>
@@ -72,4 +71,5 @@
         </table>
 
     </body>
+    <script src="java.js"></script>
 </html>
