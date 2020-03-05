@@ -5,10 +5,10 @@
         <title>Connect Four</title>
         <link rel="icon" href="images/connect-four-icon.png" type="image/x-icon" sizes="8x8 16x16 32x32">
     </head>
-    <body>
+    <body onclick="checkWinner()">
         <h1 class="title">Connect Four</h1>
 
-        <table onclick="tableClick(), checkWinner()">
+        <table onclick="tableClick()">
             <tr>
                 <td id="row1-col1" name="empty" class="row" onmouseover="game(this)"  ></td>
                 <td id="row1-col2" onmouseover="game(this)" name="empty"></td>

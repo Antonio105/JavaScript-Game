@@ -57,8 +57,6 @@ function tableClick()
                                 player = false;
                                 break;
                             }
-    
-
                             else if(player == false)
                             {
                                 document.getElementById(marker).style.backgroundColor="yellow";
@@ -129,7 +127,9 @@ function tableClick()
 }
 var rred =0;
 var yyellow=0;
-var plate;
+var flip = true;
+var cRed=0;
+var cYellow=0;
 
 function checkWinner()
 {
@@ -141,47 +141,40 @@ function checkWinner()
             var hold = document.getElementById(teller).style.backgroundColor;
             if(hold=="red")
             {  
-                plate = true;
-                if(plate==true)
+                if(flip ==true)
                 {
-                    console.log("red");
-                    console.log(rred);
-                    rred+=1;
-                if(rred==4)
+                    cRed+=1;
+                }
+                else 
                 {
-                    alert("Winner! R")
+                    cYellow=0;
+                    cRed+=1;
                     break;
                 }
-                    break;
+                if(cRed==4)
+                {
+                    alert("Winner! Congratulations Player Red!");
                 }
-                else{
-                    rred=0;
-                    break;
-                }
+                flip=true;
             }
             else if(hold=="yellow")
             {
-                plate = false;
-                if(plate==false)
+                if(flip ==false)
                 {
-                    console.log("yellow");
-                    console.log(yyellow);
-                    yyellow+=1;
-                    if(yyellow==4)
-                    {
-                        alert("Winner! Y")
-                        break;
-                    }
-                        break;
-                    }
+                    cYellow+=1;
                 }
                 else
                 {
-                    yyellow=0;
+                    cRed=0;
+                    cYellow+=1;
                     break;
                 }
+                if(cYellow==4)
+                {
+                    alert("winner! Congratulations Player Yellow!");
+                }
+                flip=false;
             }
         }
- }
-
-
+    }
+}
