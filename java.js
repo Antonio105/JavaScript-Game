@@ -149,16 +149,19 @@ function checkWinner()
                 {
                     cYellow=0;
                     cRed+=1;
-                    break;
+                   // break;
                 }
                 if(cRed==4)
                 {
                     alert("Winner! Congratulations Player Red!");
                 }
                 flip=true;
+                console.log("cRed"+cRed);
+                console.log("cYellow"+cYellow);
             }
             else if(hold=="yellow")
             {
+                flip=false;
                 if(flip ==false)
                 {
                     cYellow+=1;
@@ -167,13 +170,15 @@ function checkWinner()
                 {
                     cRed=0;
                     cYellow+=1;
-                    break;
+                   // break;
                 }
                 if(cYellow==4)
                 {
                     alert("winner! Congratulations Player Yellow!");
                 }
-                flip=false;
+                
+                console.log("cRedY"+cRed);
+                console.log("cYellowY"+cYellow);
             }
         }
     }
