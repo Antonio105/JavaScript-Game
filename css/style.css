@@ -32,6 +32,7 @@ table {
     border-spacing: 15px 15px;
     overflow: hidden;
     z-index: 1;
+    clear: both;
 }
 
 td, .row {
@@ -53,4 +54,43 @@ td:hover::after {
 }
 td:hover{
     background-color: grey;
+}
+
+.animation-box {
+    position: absolute;
+    background-color:#3385FF;
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    margin-top: 7%;
+    margin-left: 4.5%;
+    z-index: -1;
+}
+
+#animation{
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    position: absolute;
+    border-radius: 4px;
+    background-image: url("../images/icon.png");
+}
+
+.a1-button {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'pixel';
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 21.5%;
+}
+
+.super {
+    color: white;
+    font-family: 'pixel';
+    position: absolute;
+    font-size: 1.5vw;
+    margin-left: 6%;
+    margin-top: 5%;
 }
