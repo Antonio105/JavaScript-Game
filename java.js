@@ -29,6 +29,7 @@ function boboard()
         }
     }
 }
+//window.setInterval(checkWinner,3000);
 var currentID;
 var currentPositionX;
 var currentPositionY;
@@ -130,7 +131,18 @@ var yyellow=0;
 var flip = true;
 var cRed=0;
 var cYellow=0;
+function idCheck()
+{
+    return console.log(currentID);
+}
+function winners()
+{
+  
+            var theList = document.getElementsByTagName("td");
+        theList.filter(idCheck);
+  
 
+}
 function checkWinner()
 {
     for(var w = 1; w <=6; w++)
@@ -138,29 +150,50 @@ function checkWinner()
         for(var q = 1; q<=7;q++)
         {
             var teller ="row"+w+"-col"+q;
+           
             var hold = document.getElementById(teller).style.backgroundColor;
+            console.log(hold);
+            var track =0;var tracker = 0;
             if(hold=="red")
             {  
-                if(flip ==true)
+                cRed=1;
+                track = track +2;
+                console.log(track+"red");
+                /*for(var count = 0;count <=3;count++)
                 {
-                    cRed+=1;
+                    teller ="row"+w+"-col"+(q+count);
+                    var listing = document.getElemensByTagName("td"");
+                    if(hold =="red")
+                    {
+                        cRed+=1;
+                    }
+
                 }
-                else 
+                */
+                flip=false;
+                if(flip ==false)
+                {
+                    //cRed+=1;
+                }
+                else
                 {
                     cYellow=0;
                     cRed+=1;
-                   // break;
+                   break;
                 }
+                
                 if(cRed==4)
                 {
                     alert("Winner! Congratulations Player Red!");
                 }
                 flip=true;
-                console.log("cRed"+cRed);
-                console.log("cYellow"+cYellow);
+               // console.log("cRed"+cRed);
+              //  console.log("cYellow"+cYellow);
             }
             else if(hold=="yellow")
             {
+                tracker = tracker = 2;
+                console.log(tracker+"yellow");
                 flip=false;
                 if(flip ==false)
                 {
@@ -170,15 +203,15 @@ function checkWinner()
                 {
                     cRed=0;
                     cYellow+=1;
-                   // break;
+                   break;
                 }
                 if(cYellow==4)
                 {
                     alert("winner! Congratulations Player Yellow!");
                 }
                 
-                console.log("cRedY"+cRed);
-                console.log("cYellowY"+cYellow);
+                //console.log("cRedY"+cRed);
+                //console.log("cYellowY"+cYellow);
             }
         }
     }
