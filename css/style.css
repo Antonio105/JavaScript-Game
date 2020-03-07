@@ -94,3 +94,34 @@ td:hover{
     margin-left: 6%;
     margin-top: 5%;
 }
+
+
+
+/*
+text animation
+*/
+.hone {
+    text-align: center;
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 5em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgb(73, 25, 85), rgb(33, 19, 156), rgb(40, 106, 182));
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
