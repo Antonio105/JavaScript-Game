@@ -131,18 +131,78 @@ var yyellow=0;
 var flip = true;
 var cRed=0;
 var cYellow=0;
+
+var theList = document.getElementsByTagName("td");
 function idCheck()
 {
-    return console.log(currentID);
+    //var tempterment =theList.indexOf("red",0);
+
+        var counter = new Number;
+        
+        for(var l =0;l<=theList.length;l++)
+        {
+            var temp = theList.item(l).style.backgroundColor;
+            //var temp1 = theList.item(l+1).name;
+            //var temp2 = theList.item(l+2).name;
+            //var temp3 = theList.item(l+3).name;
+         
+           console.log(theList.item(l).style.backgroundColor);
+           
+            // horizontal check
+            if(theList.item(l).style.backgroundColor == "red" && theList.item(l+1).style.backgroundColor == "red" && theList.item(l+2).style.backgroundColor == "red" && theList.item(l+3).style.backgroundColor == "red")
+            {
+                alert("Congrats red player, you won buy get 4 in a row horizontal!");
+            }
+            else if( theList.item(l).style.backgroundColor == "yellow" && theList.item(l+1).style.backgroundColor == "yellow" && theList.item(l+2).style.backgroundColor == "yellow" && theList.item(l+3).style.backgroundColor == "yellow")
+            {
+                alert("Congrats yellow player, you won buy get 4 in a row horizontal!");
+            } 
+            
+            
+            //vertical check
+            if(theList.item(l).style.backgroundColor == "red" && theList.item(l+7).style.backgroundColor == "red" && theList.item(l+14).style.backgroundColor == "red" && theList.item(l+21).style.backgroundColor == "red")
+            {
+                alert("Congrats red player, you won buy get 4 in a row vertical!");
+            }
+            else if( theList.item(l).style.backgroundColor == "yellow" && theList.item(l+7).style.backgroundColor == "yellow" && theList.item(l+14).style.backgroundColor == "yellow" && theList.item(l+21).style.backgroundColor == "yellow")
+            {
+                alert("Congrats yellow player, you won buy get 4 in a row vertical!");
+            } 
+
+            //diagonal check down
+            if(theList.item(l).style.backgroundColor == "red" && theList.item(l+8).style.backgroundColor == "red" && theList.item(l+16).style.backgroundColor == "red" && theList.item(l+24).style.backgroundColor == "red")
+            {
+                alert("Congrats red player, you won buy get 4 in a row diagonal down!");
+            }
+            else if( theList.item(l).style.backgroundColor == "yellow" && theList.item(l+8).style.backgroundColor == "yellow" && theList.item(l+16).style.backgroundColor == "yellow" && theList.item(l+24).style.backgroundColor == "yellow")
+            {
+                alert("Congrats yellow player, you won buy get 4 in a row diagonal down!");
+            }  
+            
+            //diagonal check up
+            if(theList.item(l).style.backgroundColor == "red" && theList.item(l+6).style.backgroundColor == "red" && theList.item(l+12).style.backgroundColor == "red" && theList.item(l+18).style.backgroundColor == "red")
+            {
+                alert("Congrats red player, you won buy get 4 in a row diagonal up!");
+            }
+            else if( theList.item(l).style.backgroundColor == "yellow" && theList.item(l+6).style.backgroundColor == "yellow" && theList.item(l+12).style.backgroundColor == "yellow" && theList.item(l+18).style.backgroundColor == "yellow")
+            {
+                alert("Congrats yellow player, you won buy get 4 in a row diagonal up!");
+            }  
+            
+        }
+     
+  
 }
 function winners()
 {
   
-            var theList = document.getElementsByTagName("td");
-        theList.filter(idCheck);
+             
+        theList.filter(idCheck());
   
 
 }
+
+
 function checkWinner()
 {
     for(var w = 1; w <=6; w++)
@@ -184,7 +244,7 @@ function checkWinner()
                 
                 if(cRed==4)
                 {
-                    alert("Winner! Congratulations Player Red!");
+                    
                 }
                 flip=true;
                // console.log("cRed"+cRed);
@@ -207,7 +267,7 @@ function checkWinner()
                 }
                 if(cYellow==4)
                 {
-                    alert("winner! Congratulations Player Yellow!");
+                    
                 }
                 
                 //console.log("cRedY"+cRed);

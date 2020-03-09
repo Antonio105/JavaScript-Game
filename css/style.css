@@ -108,7 +108,7 @@ text animation
     font-size: 5em;
     letter-spacing: 4px;
     overflow: hidden;
-    background: linear-gradient(90deg, rgb(73, 25, 85), rgb(33, 19, 156), rgb(40, 106, 182));
+    background: linear-gradient(90deg, rgb(65, 27, 124), rgb(33, 19, 156), rgb(40, 106, 182));
     background-repeat: no-repeat;
     background-size: 80%;
     animation: animate 3s linear infinite;
