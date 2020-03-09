@@ -131,7 +131,7 @@ var yyellow=0;
 var flip = true;
 var cRed=0;
 var cYellow=0;
-
+var winnerr;
 var theList = document.getElementsByTagName("td");
 function idCheck()
 {
@@ -151,43 +151,51 @@ function idCheck()
             // horizontal check
             if(theList.item(l).style.backgroundColor == "red" && theList.item(l+1).style.backgroundColor == "red" && theList.item(l+2).style.backgroundColor == "red" && theList.item(l+3).style.backgroundColor == "red")
             {
-                alert("Congrats red player, you won buy get 4 in a row horizontal!");
-                
+               
+                winnerr = document.getElementById("winnerr").innerHTML = "Congrats red player, you won buy get 4 in a row horizontally!";
             }
             else if( theList.item(l).style.backgroundColor == "yellow" && theList.item(l+1).style.backgroundColor == "yellow" && theList.item(l+2).style.backgroundColor == "yellow" && theList.item(l+3).style.backgroundColor == "yellow")
             {
-                alert("Congrats yellow player, you won buy get 4 in a row horizontal!");
+                
+                winnerr = document.getElementById("winnerr").innerHTML = "Congrats yellow player, you won buy get 4 in a row horizontally!";
             } 
             
             
             //vertical check
             if(theList.item(l).style.backgroundColor == "red" && theList.item(l+7).style.backgroundColor == "red" && theList.item(l+14).style.backgroundColor == "red" && theList.item(l+21).style.backgroundColor == "red")
             {
-                alert("Congrats red player, you won buy get 4 in a row vertical!");
+                
+                winnerr = document.getElementById("winnerr").innerHTML = "Congrats red player, you won buy get 4 in a row vertically!";
             }
             else if( theList.item(l).style.backgroundColor == "yellow" && theList.item(l+7).style.backgroundColor == "yellow" && theList.item(l+14).style.backgroundColor == "yellow" && theList.item(l+21).style.backgroundColor == "yellow")
             {
-                alert("Congrats yellow player, you won buy get 4 in a row vertical!");
+                
+                winnerr = document.getElementById("winnerr").innerHTML = "Congrats yellow player, you won buy get 4 in a row vertically!";
             } 
 
             //diagonal check down
             if(theList.item(l).style.backgroundColor == "red" && theList.item(l+8).style.backgroundColor == "red" && theList.item(l+16).style.backgroundColor == "red" && theList.item(l+24).style.backgroundColor == "red")
             {
-                alert("Congrats red player, you won buy get 4 in a row diagonal down!");
+               
+                winnerr = document.getElementById("winnerr").innerHTML = "Congrats red player, you won buy get 4 in a row diagonally down!";
             }
             else if( theList.item(l).style.backgroundColor == "yellow" && theList.item(l+8).style.backgroundColor == "yellow" && theList.item(l+16).style.backgroundColor == "yellow" && theList.item(l+24).style.backgroundColor == "yellow")
             {
-                alert("Congrats yellow player, you won buy get 4 in a row diagonal down!");
+               
+                winnerr = document.getElementById("winnerr").innerHTML = "Congrats yellow player, you won buy get 4 in a row diagonally down!";
             }  
             
             //diagonal check up
             if(theList.item(l).style.backgroundColor == "red" && theList.item(l+6).style.backgroundColor == "red" && theList.item(l+12).style.backgroundColor == "red" && theList.item(l+18).style.backgroundColor == "red")
             {
-                alert("Congrats red player, you won buy get 4 in a row diagonal up!");
+                
+                winnerr = document.getElementById("winnerr").innerHTML = "Congrats red player, you won buy get 4 in a row diagonally up!";
             }
             else if( theList.item(l).style.backgroundColor == "yellow" && theList.item(l+6).style.backgroundColor == "yellow" && theList.item(l+12).style.backgroundColor == "yellow" && theList.item(l+18).style.backgroundColor == "yellow")
             {
-                alert("Congrats yellow player, you won buy get 4 in a row diagonal up!");
+                
+                winnerr = document.getElementById("winnerr").innerHTML = "Congrats yellow player, you won buy get 4 in a row diagonally up!";
+
             }  
             
         }

@@ -94,7 +94,12 @@ td:hover{
     margin-left: 6%;
     margin-top: 5%;
 }
-
+#winnerr{
+    color: white;
+    text-align: center;
+    font-size: 150%;
+    font-family: 'pixel';
+}
 .divbut{
    
     text-align: center;
