@@ -152,6 +152,7 @@ function idCheck()
             if(theList.item(l).style.backgroundColor == "red" && theList.item(l+1).style.backgroundColor == "red" && theList.item(l+2).style.backgroundColor == "red" && theList.item(l+3).style.backgroundColor == "red")
             {
                 alert("Congrats red player, you won buy get 4 in a row horizontal!");
+                
             }
             else if( theList.item(l).style.backgroundColor == "yellow" && theList.item(l+1).style.backgroundColor == "yellow" && theList.item(l+2).style.backgroundColor == "yellow" && theList.item(l+3).style.backgroundColor == "yellow")
             {
