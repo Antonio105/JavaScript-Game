@@ -95,8 +95,16 @@ td:hover{
     margin-top: 5%;
 }
 
-
-
+.divbut{
+   
+    text-align: center;
+}
+.reset{
+    width: 200px;
+    height: 50px;
+    font-size: 150%;
+    
+}
 /*
 text animation
 */
